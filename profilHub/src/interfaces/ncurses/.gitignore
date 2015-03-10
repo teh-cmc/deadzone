@@ -1,0 +1,3 @@
+# Ncurses interface specific ignore rules
+debug_ph
+libs

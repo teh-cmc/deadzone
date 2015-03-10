@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+cd ../../ph/
+./configure
+cmake .
+make r
+cd -
+cmake .
+make r

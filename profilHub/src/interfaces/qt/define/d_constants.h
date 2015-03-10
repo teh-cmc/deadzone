@@ -1,0 +1,6 @@
+#ifndef __CONSTANTS_DEFINE_FILE__
+#define __CONSTANTS_DEFINE_FILE__
+
+#define D_TEXTBOX_MAX_LENGTH	511
+
+#endif

@@ -1,0 +1,9 @@
+#ifndef __DEFAULTS_DEFINE_FILE__
+#define __DEFAULTS_DEFINE_FILE__
+
+#define D_DEFAULT_WINDOW_WIDTH	800
+#define D_DEFAULT_WINDOW_HEIGHT	600
+
+#define D_DEFAULT_WINDOW_TITLE	"profilHub"
+
+#endif

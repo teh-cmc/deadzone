@@ -1,0 +1,16 @@
+#ifndef __DESIGN_DEFINE_FILE__
+#define __DESIGN_DEFINE_FILE__
+
+#define D_TAB_HEADER_HEIGHT		30
+
+#define D_ICON_SIZE			15
+
+#define D_TAB_HEADER_MARGIN		1
+#define D_SEARCH_BAR_MARGIN		1
+#define D_TAB_DISPLAYER_MARGIN		1
+
+#define D_LAUNCHING_OPTIONS_HEIGHT	150
+
+#define D_INFO_BAR_WIDTH		200
+
+#endif

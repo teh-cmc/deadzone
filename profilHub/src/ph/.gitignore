@@ -1,0 +1,7 @@
+# .ph framework specific ignore rules
+
+include/libxml
+libs/
+ph
+ph_ut
+libph.so

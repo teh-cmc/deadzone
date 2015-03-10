@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+# Copyright (C) 2013  Quentin Perez <perez.quentin77@gmail.com>
+#
+# This is the profilHub module check script
+#
+# This file is part of profilHub.
+#
+# profilHub is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+REQUIRED="valgrind \
+	  foo \
+	  bar2 \
+	  bar \
+	  conky"
+
+BLACKLIST_SIZE=0
+DIRECTORY="PROFILHUB_DEPENDS_$(date +%s | sha256sum | base64 | head -c 32)"
+PWD=$(pwd)
+
+mkdir /tmp/$DIRECTORY
+for ARG in $REQUIRED
+do
+	VALID="\033[1;32mYES"
+	command -v ${ARG} >/dev/null 2>&1 ||
+	{
+		VALID="\033[1;31mNO"
+		BLACKLIST=$BLACKLIST" ${ARG}"
+		BLACKLIST_SIZE=$[$BLACKLIST_SIZE + 1]
+	}
+	echo -e "\033[0;32mChecking for \033[1;33m${ARG}\033[0;32m - ${VALID}\033[0;37m"
+done
+
+if [ ${BLACKLIST_SIZE} != 0 ]; then
+	echo -ne "Do you have the root privileges (Y/n) ? "
+	read ROOT
+fi
+
+cd /tmp/$DIRECTORY
+for ARG in $BLACKLIST
+do
+	echo -ne "\033[0;32mDo you want install \033[1;33m${ARG} \033[0;32m(Y/n) ? \033[0;37m"
+	read ANSWER
+	if [ ${ANSWER} == "Y" ] || [ ${ANSWER} == "y" ]; then
+		ERROR=0
+		if [ ${ROOT} == "Y" ] || [ ${ROOT} == "y" ]; then
+			sudo apt-get install ${ARG}
+		else
+			apt-get download ${ARG} >/dev/null 2>&1 ||
+			{
+				echo -e "\033[1;31mUnable to locate package \033[1;33m${ARG}\033[0;37m"
+				ERROR=1
+			}
+			if [ ${ERROR} == 0 ];then
+				echo -e "\033[0;32mDownloading package \033[1;33m${ARG} \033[1;32msuccess\033[0;37m"
+			fi
+		fi
+	fi
+done
+
+for file in `ls`;
+do
+	echo "file ${file}"
+	dpkg --extract ${file} .
+	/bin/rm	${file}
+done
+cd $PWD
+/bin/rm -fr /tmp/$DIRECTORY

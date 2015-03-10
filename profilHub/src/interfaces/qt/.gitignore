@@ -1,0 +1,4 @@
+# Qt interface specific ignore rules
+
+*.cxx
+libs/
