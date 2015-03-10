@@ -1,0 +1,12 @@
+{
+    "show_files": true,
+    "show_path": true,
+    "ignore_case": false,
+    "auto_refresh_sidebar": true,
+    "completion_type": "nix",
+    "use_folder_name": true,
+    "relative_from_current": true,
+    "vcs_management": false,
+    "shell_input": true,
+    "append_extension_on_move": false,
+}

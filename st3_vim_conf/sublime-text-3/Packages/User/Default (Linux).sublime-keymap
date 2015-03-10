@@ -1,0 +1,23 @@
+[
+  //
+  // AdvancedNewFile stuff
+  //
+
+  { "keys": ["ctrl+n"], "command": "advanced_new_file"},
+  { "keys": ["shift+ctrl+n"], "command": "advanced_new_file", "args": {"is_python": true}},
+  {
+    "keys": ["tab"],
+    "command": "insert",
+    "args": {"characters": "\t"},
+    "context": [{
+      "key": "setting.anf_panel"
+    }]
+  },
+
+  //
+  // Build stuff to override vintageous CTRL keys
+  //
+
+
+  { "keys": ["ctrl+shift+b"], "command": "build", "args": {"variant": "Run"} },
+]

@@ -1,0 +1,25 @@
+{
+	"auto_upgrade": true,
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"All Autocomplete",
+		"C Improved",
+		"Dockerfile Syntax Highlighting",
+		"INI",
+		"Makefile Improved",
+		"Sublime-Erlang",
+		"SublimeLinter",
+		"SublimeLinter-contrib-clang",
+		"SublimeLinter-contrib-erlc",
+		"SublimeLinter-contrib-golint",
+		"SublimeLinter-contrib-gotype",
+		"SublimeLinter-flake8",
+		"SublimeLinter-json",
+		"Vintageous"
+	],
+	"repositories":
+	[
+		"https://github.com/fjl/Sublime-Erlang"
+	]
+}
