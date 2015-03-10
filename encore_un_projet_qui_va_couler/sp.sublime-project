@@ -1,0 +1,21 @@
+{
+	"folders": [ {
+			"follow_symlinks": true,
+			"path": "."
+		}
+	],
+	"SublimeLinter": {
+		"linters": {
+			"clang": {
+				"include_dirs": [
+					"/absolute/path/to/encore_un_projet_qui_va_couler/include",
+					"/absolute/path/to/encore_un_projet_qui_va_couler/tests/include",
+
+					"/absolute/path/to/encore_un_projet_qui_va_couler/lib/SDL2-2.0.3/include",
+					"/absolute/path/to/encore_un_projet_qui_va_couler/lib/glib-2.40.0",
+					"/absolute/path/to/encore_un_projet_qui_va_couler/lib/glib-2.40.0/glib"
+				]
+			}
+		}
+	}
+}

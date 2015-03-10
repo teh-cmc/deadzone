@@ -1,0 +1,6 @@
+language: c
+compiler:
+  - gcc
+  - clang
+install: make DEBUG=1
+script: xvfb-run -a -s "-screen 0 1280x720x24" make DEBUG=1 run-tests
