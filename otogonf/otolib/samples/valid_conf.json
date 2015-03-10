@@ -1,0 +1,33 @@
+{
+    "OTO-BASICAUTH": {
+        "couchbase": {
+            "default": {
+                "OTO-RDONLY": {
+                    "user": "dennis"
+                },
+                "OTO-WRONLY": {
+                    "password": "ritchie"
+                },
+                "ip": "172.17.0.1",
+                "port": "8091"
+            }
+        }
+    },
+    "OTO-RDONLY": {
+        "OTO-BASICAUTH": {
+            "elasticsearch": {
+                "ip": "127.0.0.1",
+                "password": "knopfler",
+                "user": "mark"
+            }
+        }
+    },
+    "OTO-WRONLY": {
+        "pgsql": {
+            "OTO-PRIVATE": {
+                "password": "house"
+            },
+            "username": "gregory"
+        }
+    }
+}

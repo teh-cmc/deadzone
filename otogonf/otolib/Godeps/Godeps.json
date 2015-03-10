@@ -1,0 +1,23 @@
+{
+	"ImportPath": "github.com/teh-cmc/otogonf/otolib",
+	"GoVersion": "go1.4",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/ant0ine/go-json-rest/rest",
+			"Comment": "v2.1.0-18-g8cc310f",
+			"Rev": "8cc310f7d4e12bf8677ff00a90986fe633d3ab24"
+		},
+		{
+			"ImportPath": "github.com/go-fsnotify/fsnotify",
+			"Comment": "v1.1.0",
+			"Rev": "f582d920d11386e8ae15227bb5933a8f9b4c3dec"
+		},
+		{
+			"ImportPath": "github.com/teh-cmc/cast",
+			"Rev": "3fd0de3a749295357f5ec75f326ff61bb87c3d9c"
+		}
+	]
+}

@@ -1,0 +1,12 @@
+language: go
+go:
+    #- 1.1
+    #- 1.2.1
+    - 1.3
+    - tip
+install:
+    - export PATH=$PATH:$HOME/gopath/bin
+    - go get github.com/tools/godep
+script:
+    - cd $HOME/gopath/src/github.com/teh-cmc/otogonf/otocli && godep go test -race
+    - cd $HOME/gopath/src/github.com/teh-cmc/otogonf/otolib && godep go test -race
