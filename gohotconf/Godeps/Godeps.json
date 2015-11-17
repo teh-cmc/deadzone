@@ -1,0 +1,18 @@
+{
+	"ImportPath": "github.com/teh-cmc/gohotconf",
+	"GoVersion": "go1.5",
+	"Packages": [
+		"github.com/teh-cmc/gohotconf"
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/teh-cmc/cast",
+			"Rev": "3fd0de3a749295357f5ec75f326ff61bb87c3d9c"
+		},
+		{
+			"ImportPath": "gopkg.in/fsnotify.v1",
+			"Comment": "v1.2.0",
+			"Rev": "96c060f6a6b7e0d6f75fddd10efeaca3e5d1bcb0"
+		}
+	]
+}
